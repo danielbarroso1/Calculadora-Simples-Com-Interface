@@ -1,2 +1,2 @@
 # Calculadora Simples Com Interface
- Projeto de calculadora simples desenvolvido em python.
+ Versão 1 do projeto de calculadora simples desenvolvido em python.
