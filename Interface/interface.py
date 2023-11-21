@@ -9,13 +9,13 @@ expressao_atual = []
 # Interface da aplicação
 def main():
     layout = [
-              [sg.Text('0', font='Arial', size=(30), justification='right', key='Zero')],
-              [sg.Button('⌫', size=6)],
-              [sg.Button('1', size=6), sg.Button('2', size=6), sg.Button('3', size=6), sg.Button('+', size=6)],
-              [sg.Button('4', size=6), sg.Button('5', size=6), sg.Button('6', size=6), sg.Button('-', size=6)],
-              [sg.Button('7', size=6), sg.Button('8', size=6), sg.Button('9', size=6), sg.Button('x', size=6)],
-              [sg.Button('0', size=6), sg.Button('/', size=6), sg.Button('C', size=6), sg.Button('=', size=6)],
-              [sg.Text('0', font='Arial', size=30, key='Resultado')],
+              [sg.Text('0', font=('Helvetica', 30), justification='right', key='Zero', size=(10, 1))],
+              [sg.Button('⌫', size=6), sg.Button('%', size=6), sg.Button('**', size=6), sg.Button('+', size=6)],
+              [sg.Button('1', size=6), sg.Button('2', size=6), sg.Button('3', size=6), sg.Button('-', size=6)],
+              [sg.Button('4', size=6), sg.Button('5', size=6), sg.Button('6', size=6), sg.Button('x', size=6)],
+              [sg.Button('7', size=6), sg.Button('8', size=6), sg.Button('9', size=6), sg.Button('/', size=6)],
+              [sg.Button('0', size=6), sg.Button(',', size=6), sg.Button('C', size=6), sg.Button('=', size=6)],
+              [sg.Text('0', font=('Helvetica', 20), key='Resultado')],
               [sg.Button('Sair', font='Arial', size=27)]
     ]
 
@@ -34,7 +34,7 @@ def main():
         if evento in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
             atualizar_expressao(Janela, expressao_atual, evento)
 
-        elif evento in ('+', '-', 'x', '/'):
+        elif evento in ('+', '-', 'x', '/','%','**',','):
             atualizar_expressao(Janela, expressao_atual, ' ' + evento + ' ')
 
         elif evento in '=':
