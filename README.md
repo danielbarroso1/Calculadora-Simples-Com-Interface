@@ -1,5 +1,4 @@
 # Calculadora Simples em Python com Interface Gráfica
- Versão 1 do projeto de calculadora simples desenvolvido em python.
 
  Primeiramente, eu importei as bibliotecas PySimpleGUI e a biblioteca operadores com as funções desenvolvidas por mim, através da Documentação e alguns tutoriais consegui desenvolver minha própria lógica e pensei, porque não desenvolver uma simples calculadora?
 
@@ -11,5 +10,9 @@ Pretendo atualizar esse projeto adicionando novas operações matemáticas, e no
 
 A forma que usei para conseguir conectar o layout com os eventos foi, adicionar uma key aos textos. Por exemplo, o primeiro código: 
 
-   [sg.Text('0', font='Arial', size=(30), justification='right', key='Zero')]   Começa com um texto 0 assim que o programa é iniciado, exibindo que ainda, nenhuma operação foi feita até o momento. a key='Zero' é atualizada quando operações são feitas pelo usuário imprimindo na interface com o código Janela['Zero'].update() sendo atualizada constantemente, você pode ver isso nas funções em operadores.py
-   O código Janela['Resultado'] Funciona exatamente da mesma forma.
+   [sg.Text('0', font='Arial', size=(30), justification='right', key='Zero')]   
+   
+A expressão começa com um o número 0 assim que o programa é iniciado, exibindo que ainda, nenhuma operação foi feita até o momento. a key='Zero' é atualizada quando operações são feitas pelo usuário imprimindo na interface com o código Janela['Zero'].update() sendo atualizada constantemente, exibindo também o número 0 assim que o valor é apagado. Sendo possivel apagar apenas um valor por vez, ou zerando tudo com o operador 'C', você pode ver isso nas funções em operadores.py
+   O código Janela['Resultado'] Funciona exatamente da mesma forma. Tendo ['Resultado'] como uma key e um posição.
+
+Liçença: esse código é livre para quem quiser fazer alterações, melhorias na interface ou no desempenho. Não se preocupe.
